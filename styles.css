@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'VAG Rounded Std';
+  src: url('../asset/font/VAG Rounded Std/VAG Rounded Std Thin/VAG Rounded Std Thin.otf') format('opentype');
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 1.5s ease;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;             
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    font-family: 'VAG Rounded Std', Arial, sans-serif;
+    background: #f4f4f4;       
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;     
+    border-radius: 50%;  
+    object-fit: cover;   
+    object-position: center;
+    transition: transform 0.3s ease; 
+}
+
+.card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    background: white;
+    color: black;
+    border : 2px dotted black;
+    border-bottom: 6px solid grey;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.border-blue {
+    border: 1px dotted black;
+    border-radius: 20px;
+}
+
+.border-content {
+    width: auto;
+    margin: auto 20px;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+.card:hover .avatar {
+    transform: scale(1.05);
+}
+
+/*
+Stretch goals:
+Find other ways you can personalize 
+the design of your business card, e.g.:
+- change the border(s)
+- add border radius
+- shuffle the layout
+- shadows        🤯
+- hover effects  🤯🤯
+- animations     🤯🤯🤯
+*/
